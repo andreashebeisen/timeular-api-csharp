@@ -40,44 +40,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentication\ApiAccessResponse.cs" />
-    <Compile Include="Authentication\FullApiAccessResponse.cs" />
-    <Compile Include="Authentication\SignInRequest.cs" />
-    <Compile Include="Authentication\SignInResponse.cs" />
-    <Compile Include="ErrorResponse.cs" />
-    <Compile Include="Integrations\IntegrationsResponse.cs" />
-    <Compile Include="Profile\ProfileResponse.cs" />
+    <Compile Include="Models\Authentication\ApiAccessResponse.cs" />
+    <Compile Include="Models\Authentication\FullApiAccessResponse.cs" />
+    <Compile Include="Models\Authentication\SignInRequest.cs" />
+    <Compile Include="Models\Authentication\SignInResponse.cs" />
+    <Compile Include="Models\ErrorResponse.cs" />
+    <Compile Include="Models\Integrations\IntegrationsResponse.cs" />
+    <Compile Include="Models\Profile\ProfileResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuccessWithIgnoredErrorsResponse.cs" />
-    <Compile Include="Tracking\Activities\ActivitiesConfigurationResponse.cs" />
-    <Compile Include="Tracking\Activities\ActivityConfigurationResponse.cs" />
-    <Compile Include="Tracking\Activities\ActivityCreationRequest.cs" />
-    <Compile Include="Tracking\Activities\ActivityEditionRequest.cs" />
-    <Compile Include="Tracking\Activities\ArchivedActivitiesResponse.cs" />
-    <Compile Include="Tracking\Activities\ArchivedActivityResponse.cs" />
-    <Compile Include="Tracking\Activities\MentionResponse.cs" />
-    <Compile Include="Tracking\Activities\TagResponse.cs" />
-    <Compile Include="Tracking\Activities\TagsAndMentionsResponse.cs" />
-    <Compile Include="Tracking\CurrentTrackingResponse.cs" />
-    <Compile Include="Tracking\Devices\DeviceEditionRequest.cs" />
-    <Compile Include="Tracking\Devices\DeviceResponse.cs" />
-    <Compile Include="Tracking\Devices\DevicesResponse.cs" />
-    <Compile Include="Tracking\EditTrackingRequest.cs" />
-    <Compile Include="Tracking\EditTrackingResponse.cs" />
-    <Compile Include="Tracking\StartedTrackingResponse.cs" />
-    <Compile Include="Tracking\StartTrackingRequest.cs" />
-    <Compile Include="Tracking\StoppedTrackingResponse.cs" />
-    <Compile Include="Tracking\StopTrackingRequest.cs" />
-    <Compile Include="Tracking\Entries\TimeEntriesResponse.cs" />
-    <Compile Include="Tracking\Entries\TimeEntryActivityResponse.cs" />
-    <Compile Include="Tracking\Entries\TimeEntryCreationRequest.cs" />
-    <Compile Include="Tracking\Entries\TimeEntryDurationResponse.cs" />
-    <Compile Include="Tracking\Entries\TimeEntryEditionRequest.cs" />
-    <Compile Include="Tracking\Entries\TimeEntryResponse.cs" />
-    <Compile Include="Tracking\TrackingActivityResponse.cs" />
-    <Compile Include="Tracking\TrackingResponse.cs" />
+    <Compile Include="Models\SuccessWithIgnoredErrorsResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\ActivitiesConfigurationResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\ActivityConfigurationResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\ActivityCreationRequest.cs" />
+    <Compile Include="Models\Tracking\Activities\ActivityEditionRequest.cs" />
+    <Compile Include="Models\Tracking\Activities\ArchivedActivitiesResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\ArchivedActivityResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\MentionResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\TagResponse.cs" />
+    <Compile Include="Models\Tracking\Activities\TagsAndMentionsResponse.cs" />
+    <Compile Include="Models\Tracking\CurrentTrackingResponse.cs" />
+    <Compile Include="Models\Tracking\Devices\DeviceEditionRequest.cs" />
+    <Compile Include="Models\Tracking\Devices\DeviceResponse.cs" />
+    <Compile Include="Models\Tracking\Devices\DevicesResponse.cs" />
+    <Compile Include="Models\Tracking\EditTrackingRequest.cs" />
+    <Compile Include="Models\Tracking\EditTrackingResponse.cs" />
+    <Compile Include="Models\Tracking\StartedTrackingResponse.cs" />
+    <Compile Include="Models\Tracking\StartTrackingRequest.cs" />
+    <Compile Include="Models\Tracking\StoppedTrackingResponse.cs" />
+    <Compile Include="Models\Tracking\StopTrackingRequest.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntriesResponse.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntryActivityResponse.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntryCreationRequest.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntryDurationResponse.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntryEditionRequest.cs" />
+    <Compile Include="Models\Tracking\Entries\TimeEntryResponse.cs" />
+    <Compile Include="Models\Tracking\TrackingActivityResponse.cs" />
+    <Compile Include="Models\Tracking\TrackingResponse.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
