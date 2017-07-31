@@ -1,7 +1,4 @@
-﻿using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using timeular_api_csharp.Models.Authentication;
@@ -10,31 +7,28 @@ namespace timeular_api_csharp.Infrastructure
 {
     public class Authentication
     {
-        public async Task<SignInResponse> SignIn(SignInRequest request)
+        public async Task<SignInResponse> GetAccessToken(SignInRequest request)
         {
-            using (var client = new HttpClient())
+            var jsonObject = JsonConvert.SerializeObject(request, new JsonSerializerSettings
             {
-                var url = "https://api.timeular.com/api/v1/" + "developer/sign-in";
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
 
-                var jsonObject = JsonConvert.SerializeObject(request, new JsonSerializerSettings
-                {
-                    ContractResolver = new CamelCasePropertyNamesContractResolver()
-                });
+            var response = await HttpClientHelper.Post("/developer/sign-in", jsonObject );
+            return JsonConvert.DeserializeObject<SignInResponse>(response);
 
-                var content = new StringContent(
-                    jsonObject,  // content 
-                    Encoding.UTF8, //encoding
-                    "application/json" // mediaType
-                );
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        }
 
-                var result = await client.PostAsync(url, content);
+        public async Task<ApiAccessResponse> GetApiKey(string token)
+        {
+            var response = await HttpClientHelper.Get("/developer/api-access", token: token);
+            return JsonConvert.DeserializeObject<ApiAccessResponse>(response);
+        }
 
-
-                return JsonConvert.DeserializeObject<SignInResponse>(await result.Content.ReadAsStringAsync());
-
-
-            }
+        public async Task<FullApiAccessResponse> GetNewApiSecret(string token)
+        {
+            var response = await HttpClientHelper.Post("/developer/api-access", token: token);
+            return JsonConvert.DeserializeObject<FullApiAccessResponse>(response);
         }
     }
 }
