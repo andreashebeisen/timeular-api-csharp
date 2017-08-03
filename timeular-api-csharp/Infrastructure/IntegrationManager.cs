@@ -4,7 +4,7 @@ using timeular_api_csharp.Models.Integrations;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class Integration
+    public class IntegrationManager
     {
         public async Task<IntegrationsResponse> GetIntegrations(string token)
         {

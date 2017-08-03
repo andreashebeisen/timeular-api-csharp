@@ -6,7 +6,7 @@ using timeular_api_csharp.Models.Tracking.Activities;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class Activity
+    public class ActivityManager
     {
         public async Task<ActivitiesConfigurationResponse> GetActivities(string token)
         {
@@ -14,7 +14,7 @@ namespace timeular_api_csharp.Infrastructure
             return JsonConvert.DeserializeObject<ActivitiesConfigurationResponse>(response);
         }
 
-        public async Task<ActivitiesConfigurationResponse> CreateActivity(ActivityCreationRequest request, string token)
+        public async Task<ActivityConfigurationResponse> CreateActivity(ActivityCreationRequest request, string token)
         {
             var jsonObject = JsonConvert.SerializeObject(request, new JsonSerializerSettings
             {
@@ -22,7 +22,7 @@ namespace timeular_api_csharp.Infrastructure
             });
 
             var response = await HttpClientHelper.Post("/activities", jsonObject, token);
-            return JsonConvert.DeserializeObject<ActivitiesConfigurationResponse>(response);
+            return JsonConvert.DeserializeObject<ActivityConfigurationResponse>(response);
         }
 
         public async Task<ActivityConfigurationResponse> EditActivity(string activityId, ActivityEditionRequest request, string token)

@@ -5,7 +5,7 @@ using timeular_api_csharp.Models.Tracking.Devices;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class Device
+    public class DeviceManager
     {
         public async Task<DevicesResponse> GetDevices(string token)
         {

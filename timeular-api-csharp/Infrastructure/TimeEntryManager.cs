@@ -6,7 +6,7 @@ using timeular_api_csharp.Models.Tracking.Entries;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class TimeEntry
+    public class TimeEntryManager
     {
         public async Task<TimeEntriesResponse> FindTimeEntries(string stoppedAfter, string startedBefore, string token)
         {

@@ -4,7 +4,7 @@ using timeular_api_csharp.Models.Profile;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class Profile
+    public class ProfileManager
     {
         public async Task<ProfileResponse> GetProfile(string token)
         {

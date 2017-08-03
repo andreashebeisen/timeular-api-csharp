@@ -44,14 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\Activity.cs" />
+    <Compile Include="Infrastructure\ActivityManager.cs" />
     <Compile Include="Infrastructure\Authentication.cs" />
     <Compile Include="HttpClientHelper.cs" />
-    <Compile Include="Infrastructure\Device.cs" />
-    <Compile Include="Infrastructure\Integration.cs" />
-    <Compile Include="Infrastructure\Profile.cs" />
-    <Compile Include="Infrastructure\TimeEntry.cs" />
-    <Compile Include="Infrastructure\Tracking.cs" />
+    <Compile Include="Infrastructure\DeviceManager.cs" />
+    <Compile Include="Infrastructure\IntegrationManager.cs" />
+    <Compile Include="Infrastructure\ProfileManager.cs" />
+    <Compile Include="Infrastructure\TimeEntryManager.cs" />
+    <Compile Include="Infrastructure\TrackingManager.cs" />
     <Compile Include="Models\Authentication\ApiAccessResponse.cs" />
     <Compile Include="Models\Authentication\FullApiAccessResponse.cs" />
     <Compile Include="Models\Authentication\SignInRequest.cs" />

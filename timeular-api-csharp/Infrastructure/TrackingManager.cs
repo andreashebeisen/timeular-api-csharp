@@ -5,7 +5,7 @@ using timeular_api_csharp.Models.Tracking;
 
 namespace timeular_api_csharp.Infrastructure
 {
-    public class Tracking
+    public class TrackingManager
     {
         public async Task<CurrentTrackingResponse> GetCurrentTracking(string token)
         {

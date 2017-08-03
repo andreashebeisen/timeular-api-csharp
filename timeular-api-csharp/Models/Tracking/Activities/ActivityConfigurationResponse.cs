@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public string Color { get; set; }
         public string Integration { get; set; }
-        public int DeviceSide { get; set; }
+        public int? DeviceSide { get; set; }
     }
 }
